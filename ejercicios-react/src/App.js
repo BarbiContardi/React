@@ -1,11 +1,11 @@
-import React from 'react';
+
+import './App.css';
+import Ejercicio01 from './ejercicios/Ejercicio01';
 
 function App() {
-  const hello = <h1>Hello, World!</h1>;
-
   return (
-    <div>
-      {hello}
+    <div className="App">
+      <Ejercicio01/>
     </div>
   );
 }

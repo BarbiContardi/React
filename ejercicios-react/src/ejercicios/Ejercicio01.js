@@ -1,6 +1,6 @@
 import React from 'react';
 
-function App() {
+function Ejercicio01() {
   const hello = <h1>Hello, World!</h1>;
 
   return (
@@ -10,4 +10,4 @@ function App() {
   );
 }
 
-export default App;
+export default Ejercicio01;
