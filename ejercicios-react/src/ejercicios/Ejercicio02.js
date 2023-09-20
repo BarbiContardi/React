@@ -1,14 +1,9 @@
 import React from 'react';
 
-function Ejercicio02() {
-    const name = "Barbara";
-    const hello = <h1>Hello,{name}</h1>;
-
-  return (
-    <div>
-      {hello}
-    </div>
-  );
+function Ejercicio02(props) {
+const { name } = props;
+return <h1>¡Hello, {name}!</h1>;
 }
 
 export default Ejercicio02;
+
