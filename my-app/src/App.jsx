@@ -1,4 +1,4 @@
-import Hello from "./ejercicios/Ejercicio07";
+import Hello from "./ejercicios/Ejercicio";
 
 function App() {
     return (
