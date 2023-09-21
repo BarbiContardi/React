@@ -1,9 +1,9 @@
-
+import Message from "./Ejercicio12"
 function Hello() {
   return (
     <div>
     <h2>Hello, World!</h2>
-    <p>What a beautiful day!</p>
+    <Message/>
     </div>
   )
 }
