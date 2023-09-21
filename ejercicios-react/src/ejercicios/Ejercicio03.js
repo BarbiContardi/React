@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Ejercicio03() {
-  const respuesta = <p> Si la variable name no se pasa a la funcion esta seria undefined</p>;
+  const respuesta = <p>Pondra Hello, undefined!</p>;
 
   return (
     <div>
