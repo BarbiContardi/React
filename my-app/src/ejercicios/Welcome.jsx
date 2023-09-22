@@ -1,9 +1,11 @@
+import Age from "./Age";
+
 // eslint-disable-next-line react/prop-types
-export default function Welcome({ name, age }) {
+export default function Welcome({ name}) {
   return (
     <div>
       <p>Welcome, {<strong>{name}</strong>}!</p>
-      <p>Your age is {age}</p>
+      <Age age={33}/>
     </div>
   );
 }
