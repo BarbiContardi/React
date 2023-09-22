@@ -1,4 +1,4 @@
 // eslint-disable-next-line react/prop-types
 export default function Welcome({ name }) {
-  return <p>Welcome, {name}!</p>;
+  return(name ? <p>Welcome, {name}!</p> : <p>Welcome, to all!</p>)
 }
