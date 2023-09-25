@@ -8,10 +8,18 @@ export default function Counter({ initialValue = 0 }) {
   function handleCounterIncrement() {
     setCounter((c) => c + 1);
   }
+  function handleCounterDecrement() {
+    setCounter((c) => c - 1);
+  }
+  function handleCounterReset() {
+    setCounter(initialValue);
+  }
   return (
     <div>
       <CounterDisplay counter={counter}/>
       <Button onClick={handleCounterIncrement} label={"Increment"} />
+      <Button onClick={handleCounterDecrement} label={"Decrement"}/>
+      <Button onClick={handleCounterReset} label={"Reset"}/>
     </div>
   );
 }
