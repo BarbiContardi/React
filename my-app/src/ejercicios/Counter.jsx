@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
+import CounterDisplay from "./CounterDisplay";
 
 // eslint-disable-next-line react/prop-types
 export default function Counter({ initialValue = 0 }) {
@@ -9,7 +10,7 @@ export default function Counter({ initialValue = 0 }) {
   }
   return (
     <div>
-      <h2>I have counted to {counter}</h2>
+      <CounterDisplay counter={counter}/>
       <Button onClick={handleCounterIncrement} label={"Increment"} />
     </div>
   );
