@@ -4,6 +4,7 @@ import Counter from "./ejercicios/Counter";
 import Hello from "./ejercicios/Hello";
 import Message from "./ejercicios/Message";
 import MouseClicker from "./ejercicios/MouseClicker";
+import MultiButton from "./ejercicios/MultiButton";
 import Welcome from "./ejercicios/Welcome";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Counter/>
         <Clock/>
         <MouseClicker/>
+        <MultiButton/>
       </div>
     );
   }
