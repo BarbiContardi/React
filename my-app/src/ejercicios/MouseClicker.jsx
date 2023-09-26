@@ -3,7 +3,8 @@ export default function MouseClicker() {
     console.log(event.currentTarget.name);
   }
   function handleImgClicker(event){
-    console.log(event.target.src)
+    console.log(event.currentTarget.src);
+    event.stopPropagation();
   }
   return (
     <button name="one" onClick={handleButtonClick}>
@@ -12,5 +13,3 @@ export default function MouseClicker() {
     </button>
   );
 }
-//se sigue imprimiendo el name al hacer click en la imagen porque ésta esta dentro del boton
-//al hacer click se hace "bubble" hasta llegar al event del boton y se imprime
