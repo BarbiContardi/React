@@ -1,14 +1,13 @@
 import Button  from "./Button";
 
 
-export default function AlertClock() {
-  function handleShowTime() {
-    alert("Current time:" + new Date());
-  }
+// eslint-disable-next-line react/prop-types
+export default function AlertClock({handleClick}) {
+ 
   return (
     <div>
       <p>Click to see the current time:</p>
-      <Button onClick={handleShowTime} label={"Click Me!"} />
+      <Button onClick={handleClick} label={"Click Me!"} />
     </div>
   );
 }

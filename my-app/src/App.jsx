@@ -8,12 +8,15 @@ import MultiButton from "./ejercicios/MultiButton";
 import Welcome from "./ejercicios/Welcome";
 
 function App() {
+  function handleShowTime() {
+    alert("Current time:" + new Date());
+  }
     return (
       <div className="App">
         <Hello/>
         <Message/>
         <Welcome name={'Barbara'}/>
-        <AlertClock />
+        <AlertClock handleClick={handleShowTime}/>
         <Counter/>
         <Clock/>
         <MouseClicker/>

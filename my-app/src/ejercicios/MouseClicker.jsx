@@ -9,7 +9,7 @@ export default function MouseClicker() {
   return (
     <button name="one" onClick={handleButtonClick}>
       Click Me!
-      <img src="./public/vite.svg" height={24} width={24} onClick={handleImgClicker} />
+      <img src="/vite.svg" height={24} width={24} onClick={handleImgClicker} />
     </button>
   );
 }
