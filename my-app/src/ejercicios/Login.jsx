@@ -12,13 +12,6 @@ function Login({ onLogin }) {
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
-
-  const handleLoginClick = () => {
-    if (username && password) {
-      onLogin({ username, password });
-    }
-  };
-
   const isButtonDisabled = !(username && password);
 
   const handleResetClick = () => {
@@ -26,39 +19,48 @@ function Login({ onLogin }) {
     setPassword("");
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault(); // se evita el comportamiento predeterminado con esta funcion
+    if (username && password) {
+      onLogin({ username, password });
+    }
+  };
+
   return (
     <div>
       <h2>Login</h2>
-      <div>
-        <label htmlFor="username">Username:</label>
-        <input
-          type="text"
-          id="username"
-          value={username}
-          onChange={handleUsernameChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          onChange={handlePasswordChange}
-        />
-      </div>
-      <label>
-        <input type="checkbox" name="rememberMe" onChange={onLogin} />
-        Remember Me!
-      </label>
-      <div>
-        <button type="button" onClick={handleResetClick}>
-          Reset
-        </button>
-        <button onClick={handleLoginClick} disabled={isButtonDisabled}>
-          Login
-        </button>
-      </div>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            value={username}
+            onChange={handleUsernameChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={handlePasswordChange}
+          />
+        </div>
+        <label>
+          <input type="checkbox" name="rememberMe" onChange={onLogin} />
+          Remember Me!
+        </label>
+        <div>
+          <button type="button" onClick={handleResetClick}>
+            Reset
+          </button>
+          <button type="submit" disabled={isButtonDisabled}>
+            Login
+          </button>
+        </div>
+      </form>
     </div>
   );
 }
