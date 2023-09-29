@@ -1,10 +1,13 @@
 export default function UncontrolledLogin() {
     function handleFormSubmit(event) {
         event.preventDefault();
-        const username = event.target.elements.username.value; //utilizo Api DOM para acceder a los datos del formulario
-        const password = event.target.elements.password.value;
-        const data = { username, password };
-        console.log(data);
+        const formData = new FormData(event.target);
+        const data = {
+            username : formData.get('username'),
+            password : formData.get('password'),
+            session : formData.get('session') === 'on' ? true : false,
+        }
+        console.log(data)
       }
 
   return (
@@ -18,6 +21,7 @@ export default function UncontrolledLogin() {
     </form>
   );
 }
-//la API estándar de React DOM es fundamental para interactuar con el DOM en aplicaciones React,
-// pero también existen API no estándar, como las bibliotecas de manejo de formularios Formik o react-hook-form,
-// que pueden ser útiles para acceder y gestionar datos de formularios de manera más eficiente.
+
+//FormData Api es una herramienta útil para recopilar y enviar datos de formularios 
+//de manera eficiente, especialmente en aplicaciones que utilizan formularios HTML estándar,
+//como desventaja puede no ser compatible con navegadores mas antiguos
