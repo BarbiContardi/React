@@ -7,6 +7,7 @@ import Login from "./ejercicios/Login";
 import Message from "./ejercicios/Message";
 import MouseClicker from "./ejercicios/MouseClicker";
 import MultiButton from "./ejercicios/MultiButton";
+import UncontrolledLogin from "./ejercicios/UncontrolledLogin";
 import Welcome from "./ejercicios/Welcome";
 
 
@@ -26,6 +27,7 @@ function App() {
         <MultiButton/>
         <InteractiveWelcome/>
         <Login/>
+        <UncontrolledLogin/>
       </div>
     );
   }
