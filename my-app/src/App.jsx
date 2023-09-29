@@ -3,10 +3,12 @@ import Clock from "./ejercicios/Clock";
 import Counter from "./ejercicios/Counter";
 import Hello from "./ejercicios/Hello";
 import InteractiveWelcome from "./ejercicios/InteractiveWelcome";
+import Login from "./ejercicios/Login";
 import Message from "./ejercicios/Message";
 import MouseClicker from "./ejercicios/MouseClicker";
 import MultiButton from "./ejercicios/MultiButton";
 import Welcome from "./ejercicios/Welcome";
+
 
 function App() {
   function handleShowTime() {
@@ -23,6 +25,7 @@ function App() {
         <MouseClicker/>
         <MultiButton/>
         <InteractiveWelcome/>
+        <Login/>
       </div>
     );
   }
