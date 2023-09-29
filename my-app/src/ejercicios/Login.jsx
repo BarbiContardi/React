@@ -1,49 +1,54 @@
 import { useState } from "react";
 
-function Login() {
-  const [formData, setFormData] = useState({
-    username: "",
-    password: "",
-    rememberMe: false,
-  });
+// eslint-disable-next-line react/prop-types
+function Login({ onLogin }) {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleChange = (event) => {
-    const { name, value, type, checked } = event.target;
-
-    setFormData({
-      ...formData,
-      [name]: type === 'checkbox' ? checked : value,
-    });
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
   };
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleLoginClick = () => {
+    if (username && password) {
+      onLogin({ username, password });
+    }
+  };
+
+  const isButtonDisabled = !(username && password);
+
   return (
     <div>
-      <label htmlFor="username">Nombre de usuario:</label>
-      <input
-        type="text"
-        id="username"
-        name="username"
-        value={formData.username}
-        onChange={handleChange}
-      />
-
-      <label htmlFor="password">Contraseña:</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        value={formData.password}
-        onChange={handleChange}
-      />
-
-      <label>
+      <h2>Login</h2>
+      <div>
+        <label htmlFor="username">Username:</label>
         <input
-          type="checkbox"
-          name="rememberMe"
-          checked={formData.rememberMe}
-          onChange={handleChange}
+          type="text"
+          id="username"
+          value={username}
+          onChange={handleUsernameChange}
         />
+      </div>
+      <div>
+        <label htmlFor="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          value={password}
+          onChange={handlePasswordChange}
+        />
+      </div>
+      <label>
+        <input type="checkbox" name="rememberMe" onChange={onLogin} />
         Remember Me!
       </label>
+      <button onClick={handleLoginClick} disabled={isButtonDisabled}>
+        Login
+      </button>
     </div>
   );
 }
