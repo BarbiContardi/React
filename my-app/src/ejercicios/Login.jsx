@@ -21,6 +21,11 @@ function Login({ onLogin }) {
 
   const isButtonDisabled = !(username && password);
 
+  const handleResetClick = () => {
+    setUsername("");
+    setPassword("");
+  };
+
   return (
     <div>
       <h2>Login</h2>
@@ -46,9 +51,14 @@ function Login({ onLogin }) {
         <input type="checkbox" name="rememberMe" onChange={onLogin} />
         Remember Me!
       </label>
-      <button onClick={handleLoginClick} disabled={isButtonDisabled}>
-        Login
-      </button>
+      <div>
+        <button type="button" onClick={handleResetClick}>
+          Reset
+        </button>
+        <button onClick={handleLoginClick} disabled={isButtonDisabled}>
+          Login
+        </button>
+      </div>
     </div>
   );
 }
