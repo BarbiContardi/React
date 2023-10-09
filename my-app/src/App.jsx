@@ -1,5 +1,6 @@
 import AlertClock from "./ejercicios/AlertClock";
 import Clock from "./ejercicios/Clock";
+import Colors from "./ejercicios/Colors";
 import Counter from "./ejercicios/Counter";
 import FocusableInput from "./ejercicios/FocusableInput";
 import Hello from "./ejercicios/Hello";
@@ -32,6 +33,7 @@ function App() {
         <UncontrolledLogin/>
         <FocusableInput/>
         <StrictMode/>
+        <Colors items={['red','blue','green','orange', 'yellow']}/>
       </div>
     );
   }
