@@ -1,11 +1,17 @@
-/* eslint-disable react/prop-types */
-const Colors = ({ items }) => {
+import Color from './Color';
+
+const Colors = () => {
+  const colorList = ['red', 'blue', 'green', 'yellow', 'orange'];
+
   return (
-    <ul>
-      {items.map((color) => (
-        <li key={color.id}>{color.name}</li>
-      ))}
-    </ul>
+    <div>
+      <h1>Colors List</h1>
+      <ul>
+        {colorList.map((color, index) => (
+          <Color key={index} color={color} />
+        ))}
+      </ul>
+    </div>
   );
 };
 
