@@ -13,29 +13,35 @@ import StrictMode from "./ejercicios/StrictMode";
 import UncontrolledLogin from "./ejercicios/UncontrolledLogin";
 import Welcome from "./ejercicios/Welcome";
 
-
 function App() {
   function handleShowTime() {
     alert("Current time:" + new Date());
   }
-    return (
-      <div className="App">
-        <Hello/>
-        <Message/>
-        <Welcome name={'Barbara'}/>
-        <AlertClock handleClick={handleShowTime}/>
-        <Counter/>
-        <Clock/>
-        <MouseClicker/>
-        <MultiButton/>
-        <InteractiveWelcome/>
-        <Login/>
-        <UncontrolledLogin/>
-        <FocusableInput/>
-        <StrictMode/>
-        <Colors items={['red','blue','green','orange', 'yellow']}/>
-      </div>
-    );
-  }
-  
-  export default App;
+  return (
+    <div className="App">
+      <Hello />
+      <Message />
+      <Welcome name={"Barbara"} />
+      <AlertClock handleClick={handleShowTime} />
+      <Counter />
+      <Clock />
+      <MouseClicker />
+      <MultiButton />
+      <InteractiveWelcome />
+      <Login />
+      <UncontrolledLogin />
+      <FocusableInput />
+      <StrictMode />
+      <Colors
+        items={[
+          { id: 1, name: "Red" },
+          { id: 2, name: "Green" },
+          { id: 3, name: "Blue" },
+          { id: 4, name: "Yellow" },
+        ]}
+      />
+    </div>
+  );
+}
+
+export default App;

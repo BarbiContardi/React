@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
-
-export default function Colors({ items }) {
+const Colors = ({ items }) => {
   return (
     <ul>
-      {items.map((color, index) => (
-        <li key={index}>{color}</li>
+      {items.map((color) => (
+        <li key={color.id}>{color.name}</li>
       ))}
     </ul>
   );
-}
+};
+
+export default Colors;
