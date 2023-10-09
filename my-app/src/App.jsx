@@ -8,6 +8,7 @@ import Login from "./ejercicios/Login";
 import Message from "./ejercicios/Message";
 import MouseClicker from "./ejercicios/MouseClicker";
 import MultiButton from "./ejercicios/MultiButton";
+import StrictMode from "./ejercicios/StrictMode";
 import UncontrolledLogin from "./ejercicios/UncontrolledLogin";
 import Welcome from "./ejercicios/Welcome";
 
@@ -30,6 +31,7 @@ function App() {
         <Login/>
         <UncontrolledLogin/>
         <FocusableInput/>
+        <StrictMode/>
       </div>
     );
   }
