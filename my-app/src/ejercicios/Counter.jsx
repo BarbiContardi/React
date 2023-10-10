@@ -5,6 +5,11 @@ import CounterDisplay from "./CounterDisplay";
 
 // eslint-disable-next-line react/prop-types
 export default function Counter({ initialValue = 0 }) {
+  const MyStyle ={
+    backgroundColor: 'blue',
+    color: 'white',
+    border: '3px solid aqua',
+  }
   const [counter, setCounter] = useState(initialValue);
   const directionRef = useRef(null);
 
@@ -19,7 +24,7 @@ export default function Counter({ initialValue = 0 }) {
   const handleCounterDecrement = () => setCounter(counter - 1);
   const handleCounterReset = () => setCounter(initialValue);
   return (
-    <div>
+    <div style={MyStyle}>
       <CounterDisplay counter={counter} />
       <Button onClick={handleCounterIncrement} label={"Increment"} />
       <Button onClick={handleCounterDecrement} label={"Decrement"} />
