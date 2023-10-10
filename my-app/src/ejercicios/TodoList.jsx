@@ -7,7 +7,7 @@ export default function TodoList(){
         const handleAddItem = () => {
           if (inputValue.trim() !== '') {
             setItems([...items, inputValue]);
-            setInputValue('');
+            // setInputValue('');
           }
         };
       
