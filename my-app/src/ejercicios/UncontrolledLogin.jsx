@@ -11,17 +11,19 @@ export default function UncontrolledLogin() {
       }
 
   return (
-    <form onSubmit={handleFormSubmit}>
-      <h1>My Uncontrolled Form</h1>
+    <form className={'bg-pink-800 w-1/4 h-2/4'} onSubmit={handleFormSubmit}>
+      <h1 className={'text-slate-900'}>My Uncontrolled Form</h1>
+      <div className={'flex justify-between'}>
       <input type="text" name="username" />
       <input type="password" name="password" />
       <input type="checkbox" name="session" />
-      <button>Login</button>
-      <button type="reset">Reset</button>
+      </div>
+      <div className={'flex justify-around'}>
+      <button className={'bg-neutral-300 rounded-md'}>Login</button>
+      <button className={'bg-neutral-300 rounded-md'} type="reset">Reset</button>
+      </div>
     </form>
   );
 }
 
-//FormData Api es una herramienta útil para recopilar y enviar datos de formularios 
-//de manera eficiente, especialmente en aplicaciones que utilizan formularios HTML estándar,
-//como desventaja puede no ser compatible con navegadores mas antiguos
+
