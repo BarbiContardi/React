@@ -1,4 +1,5 @@
 import { useState } from "react";
+import clasess from './TodoList.module.scss'
 
 export default function TodoList() {
   const [items, setItems] = useState([]);
@@ -20,7 +21,7 @@ export default function TodoList() {
   };
 
   return (
-    <div>
+    <div className={clasess.list}>
       <h2>Lista de Tareas</h2>
       <ul>
         {items.map((item, index) => (

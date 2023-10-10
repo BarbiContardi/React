@@ -1,0 +1,23 @@
+.list {
+  background-color: cadetblue;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    color: white;
+  }
+  ul {
+    display: contents;
+
+    li {
+      list-style: none;
+      align-items: start;
+      button {
+        border-radius: 5px;
+        border: 1px solid blue;
+      }
+    }
+  }
+}
