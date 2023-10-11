@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { InputGroup, FormControl } from 'react-bootstrap';
 
 export default function FocusableInput() {
   const inputRef = useRef(null);
@@ -6,10 +7,13 @@ export default function FocusableInput() {
   useEffect(() => {
     inputRef.current?.focus();
   }, []);
+
   return (
     <div>
       <h2>Focus</h2>
-      <input type="text" ref={inputRef} />
+      <InputGroup>
+        <FormControl type="text" ref={inputRef} />
+      </InputGroup>
     </div>
   );
 }
