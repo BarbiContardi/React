@@ -2,6 +2,7 @@ import AlertClock from "./ejercicios/AlertClock";
 import Clock from "./ejercicios/Clock";
 import Colors from "./ejercicios/Colors";
 import Counter from "./ejercicios/Counter";
+import Container from "./ejercicios/Container";
 import FocusableInput from "./ejercicios/FocusableInput";
 import Hello from "./ejercicios/Hello";
 import InteractiveWelcome from "./ejercicios/InteractiveWelcome";
@@ -35,6 +36,7 @@ function App() {
       <StrictMode />
       <Colors />
       <TodoList/>
+      <Container title={<h1>This is a Container!</h1>}/>
     </div>
   );
 }
