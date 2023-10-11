@@ -31,12 +31,13 @@ function App() {
       <MultiButton />
       <InteractiveWelcome />
       <Login />
-      <UncontrolledLogin />
-      <FocusableInput />
       <StrictMode />
       <Colors />
-      <TodoList/>
-      <Container title={<h1>This is a Container!</h1>}/>
+      <TodoList />
+      <Container title={<h1>This is a Container!</h1>}>
+        <UncontrolledLogin />
+        <FocusableInput />
+      </Container>
     </div>
   );
 }
