@@ -4,7 +4,7 @@ import classes from './Clock.module.scss'
 
 export default function Clock() {
   const [date, setDate] = useState(new Date());
-  const language = useContext(LanguageContext); // Obtener el idioma del contexto
+  const language = useContext(LanguageContext);
 
   useEffect(() => {
     setInterval(() => {
@@ -18,3 +18,4 @@ export default function Clock() {
     </h2>
   );
 }
+//Es lo que hice en el 70
