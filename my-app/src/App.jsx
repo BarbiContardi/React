@@ -43,7 +43,9 @@ function App() {
         </select>
         <Clock />
       </div>
-    </LanguageContext.Provider>
+      </LanguageContext.Provider>
+      {/* Eliminar el Context Provider que proporciona datos al componente Clock hace que el reloj deje de funcionar correctamente.
+       Dependerá tambien de la lógica que apliquemos en la aplicación para tratar esta falta de datos. */}
       <MouseClicker />
       <MultiButton />
       <InteractiveWelcome />
