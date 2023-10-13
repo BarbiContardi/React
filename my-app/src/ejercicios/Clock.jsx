@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { LanguageContext } from "../App";
+import { LanguageContext } from './LanguajeContext'
 import classes from './Clock.module.scss'
 
 export default function Clock() {
@@ -18,4 +18,4 @@ export default function Clock() {
     </h2>
   );
 }
-//Es lo que hice en el 70
+
