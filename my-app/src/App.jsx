@@ -14,11 +14,19 @@ import StrictMode from "./ejercicios/StrictMode";
 import TodoList from "./ejercicios/TodoList";
 import UncontrolledLogin from "./ejercicios/UncontrolledLogin";
 import Welcome from "./ejercicios/Welcome";
+import { createContext, useState } from "react";
 
+export const LanguageContext = createContext('en')
 function App() {
   function handleShowTime() {
     alert("Current time:" + new Date());
   }
+  const [language, setLanguage] = useState("en");
+
+  const handleLanguageChange = (event) => {
+    setLanguage(event.target.value);
+  };
+
   return (
     <div className="App">
       <Hello />
@@ -26,7 +34,16 @@ function App() {
       <Welcome name={"Barbara"} />
       <AlertClock handleClick={handleShowTime} />
       <Counter />
-      <Clock />
+      <LanguageContext.Provider value={language}>
+      <div>
+        <h1>Aplicación Reloj</h1>
+        <select value={language} onChange={handleLanguageChange}>
+          <option value="en">Inglés</option>
+          <option value="es">Español</option>
+        </select>
+        <Clock />
+      </div>
+    </LanguageContext.Provider>
       <MouseClicker />
       <MultiButton />
       <InteractiveWelcome />
