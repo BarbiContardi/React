@@ -15,6 +15,7 @@ import TodoList from "./ejercicios/TodoList";
 import UncontrolledLogin from "./ejercicios/UncontrolledLogin";
 import Welcome from "./ejercicios/Welcome";
 import { createContext, useState } from "react";
+import GitHubUser from "./ejercicios/GitHubUser";
 
 export const LanguageContext = createContext('en')
 function App() {
@@ -44,8 +45,6 @@ function App() {
         <Clock />
       </div>
       </LanguageContext.Provider>
-      {/* Eliminar el Context Provider que proporciona datos al componente Clock hace que el reloj deje de funcionar correctamente.
-       Dependerá tambien de la lógica que apliquemos en la aplicación para tratar esta falta de datos. */}
       <MouseClicker />
       <MultiButton />
       <InteractiveWelcome />
@@ -57,6 +56,7 @@ function App() {
         <UncontrolledLogin />
         <FocusableInput />
       </Container>
+      <GitHubUser username={'barbicontardi'}/>
     </div>
   );
 }
