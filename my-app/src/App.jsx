@@ -16,6 +16,7 @@ import UncontrolledLogin from "./ejercicios/UncontrolledLogin";
 import Welcome from "./ejercicios/Welcome";
 import GitHubUser from "./ejercicios/GitHubUser";
 import { LanguageContextProvider } from "./ejercicios/LanguajeContext";
+import GitHubUsers from "./ejercicios/GitHubUsers";
 
 function App() {
   function handleShowTime() {
@@ -43,6 +44,7 @@ function App() {
         <FocusableInput />
       </Container>
       <GitHubUser username={"barbicontardi"} />
+      <GitHubUsers />
     </div>
   );
 }
