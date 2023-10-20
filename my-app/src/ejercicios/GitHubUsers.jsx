@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import GitHubUser from "./GitHubUser";
+import { Link, Outlet } from "react-router-dom";
 
 export default function GithubUsers() {
   const [users, setUsers] = useState([]);
@@ -26,11 +26,13 @@ export default function GithubUsers() {
       <ul>
         {users.map((user) => (
           <li key={user.id} onClick={() => handleUserClick(user.login)}>
-            {user.login}
+           {user.login}
           </li>
         ))}
       </ul>
-      {selectedUser && <GitHubUser username={selectedUser} />}
+      {selectedUser && (
+         <Link to={selectedUser}>Ver Perfil de: {selectedUser}</Link>)}
+         <Outlet/>
     </div>
   );
 }
