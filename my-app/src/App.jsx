@@ -1,4 +1,5 @@
 import Welcome from "./ejercicios/Welcome";
+import Counter from "./ejercicios/Counter";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Welcome name="Barbara" />} />
+      <Route path="/counter" element={<Counter />}/>
     </Routes>
   </BrowserRouter>
   );
