@@ -14,7 +14,7 @@ export default function GithubUsers() {
         .catch((e) => console.error("Error de llamada", e));
     }
     fetchData();
-  }, []);
+  }, [selectedUser]);
 
   const handleUserClick = (username) => {
     setSelectedUser(username);
@@ -26,13 +26,11 @@ export default function GithubUsers() {
       <ul>
         {users.map((user) => (
           <li key={user.id} onClick={() => handleUserClick(user.login)}>
-           {user.login}
+            {<Link to={user.login}>Ver Perfil de: {user.login}</Link>}
           </li>
         ))}
       </ul>
-      {selectedUser && (
-         <Link to={selectedUser}>Ver Perfil de: {selectedUser}</Link>)}
-         <Outlet/>
+      <Outlet />
     </div>
   );
 }
