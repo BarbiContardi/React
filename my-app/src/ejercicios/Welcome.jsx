@@ -5,7 +5,7 @@ export default function Welcome({ name}) {
   return (
     <div className="welcome">
       <p>Welcome, {<strong>{name}</strong>}!</p>
-      <Age age= {0}/>
+      <Age age= {33}/>
     </div>
   );
 }
