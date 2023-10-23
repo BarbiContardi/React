@@ -1,14 +1,9 @@
-import axios from "axios";
+import { useParams } from "react-router-dom";
 import useSWR from "swr";
 
-function fetchGitHubUser(username) {
-  return axios
-    .get(`https://api.github.com/users/${username}`)
-    .then((response) => response.data);
-}
-
-export default function useGithubUser(username) {
-  const { data, error, mutate } = useSWR(username, fetchGitHubUser);
+export default function useGithubUser() {
+  const { username } = useParams();
+  const { data, error, mutate } = useSWR(`https://api.github.com/users/${username}`);
 
   const refetch = () => {
     mutate();

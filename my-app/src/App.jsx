@@ -3,12 +3,14 @@ import Counter from "./ejercicios/Counter";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import GithubUsers from "./ejercicios/GitHubUsers";
 import ShowGithubUser from "./ejercicios/ShowGithubUser";
+import { SWRConfig } from "swr";
+import axios from "axios";
+
+const fetcher = url => axios.get(url).then(resp => resp.data);
 
 function App() {
-  // function handleShowTime() {
-  //   alert("Current time:" + new Date());
-  // }
   return (
+   <SWRConfig value={{fetcher}}> 
     <BrowserRouter>
       <nav>
         <ul>
@@ -33,6 +35,7 @@ function App() {
         <Route path="*" element={<h1>NotFound</h1>} />
       </Routes>
     </BrowserRouter>
+    </SWRConfig>
   );
 }
 
